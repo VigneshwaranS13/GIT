@@ -58,7 +58,7 @@ This will open the default editor for commit message
 
 We can also commit by 
 
-`git commit -m "msg"
+`git commit -m "msg"`
 
 ---
 
