@@ -22,6 +22,10 @@ To add newly created file to git repository
 
 `git add fiename`
 
+To commit the changes to local git repository 
+
+`git commit -m "msg"`
+
 To remove a directory from gi
 
 `rm -rf diretory_name/`
@@ -46,13 +50,35 @@ To add all the untracked files into staging area, we can use
 
 This will recursively add  all the  files in the project
 
+To commit the changes to local git repository 
+
+`git commit`
+
+This will open the default editor for commit message
+
+We can also commit by 
+
+`git commit -m "msg"
+
 ---
 
 ### **To add local repository to git hub**
 
+
 1. We need to create a repsoitory in Github  and copy the repository URl
 
-2. 
+2. Then we need to move to the local git dir where all the changes are confirmed
+
+3. Add the URL copied, which is your remote repository to where your local content from your repository is pushed.
+
+`git remote add origin 'your_url_name'`
+
+4. Finally push the changes to remote repository
+
+`git push`
+
+
+
 
 
 
