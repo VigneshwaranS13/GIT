@@ -22,6 +22,7 @@ If we want to move all the untracked files and tracked files from local to git s
 
 `git restore --staged <path/filename>`
 
+
 or
 
 `git reset Head <path/filename>`
@@ -29,6 +30,25 @@ or
 - if we want to revert the chagnes in local working directory.But we can to checkout on tracked file.For the new file if we dont require chages then we need to delete that file
 
 ` git checkout -- <path/filename>`
+
+
+#### Rename
+
+- if we want to rename the file we can use two ways
+1. Using git
+
+`git mv oldfilename.ext newfilename.ext`
+
+- so by using git rename the changes will automatically moved to staging area
+- we have to commit to get the changes reflected in local repository
+
+2. Using OS
+
+`mv oldfilename.ext newfilename.ext`
+
+- if we rename using OS then git will consider this as a two changes,the first one will be the old file is deleted and new file has been created.
+
+- so even the tracked file will be untracked after renaming the file using OS
 
 
 
