@@ -50,5 +50,24 @@ or
 
 - so even the tracked file will be untracked after renaming the file using OS
 
+- To know the git it was rename we can use below command
+
+`git add -A`
+
+- After this command if you checked the status,then the file will automatically moved to staging area with the new name
+
+
+##### Note:
+-we can move the file to differnt folder using git as well as using normal command
+
+- using git
+`git mv filename.ext folder1/folder2/folder3`
+`git mv filename.ext ../folder1/folder2/folder3` - it will move backwards
+
+- using git
+`mv filename.ext folder1/folder2/folder3`
+`mv filename.ext ../folder1/folder2/folder3` - it will move backwards
+
+
 
 
