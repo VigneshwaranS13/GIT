@@ -1,0 +1,168 @@
+http://meettheeipsums.com/
+http://hipsum.co/
+
+http://bitly.com/git-start-web
+
+to configure atom as a default editor:
+git config --global core.editor "atom --wait"
+
+
+
+to statt fresh project:
+
+git init project_name
+ls -al
+  it wil list all the files.if .git folder is there then git repository is created successully
+git commit -am "some message"
+to delete git repository locally:
+rm -rf project_folder_name
+
+to unzip the file
+unzip ~/Downloads/filename.zip
+ls
+mv oldfolder newfoldername
+ls
+
+
+adding git to existing project :
+git init
+	it will initialize the new repository using current folder as the working directory
+
+git add .
+	to add all files to git staging are
+git commit -m "comments"
+rm -rf .git
+	it will remove the git traces of the current project.It wont delete the project files
+	
+to add an exisiting project from git hub:
+
+pwd
+copy the url from git hub
+move to the req fodler
+git clone url
+	it will create a repository
+
+
+to rename file using git:
+git mv oldfilename.ext  newfilename.ext
+  since its tracked file it will be moved to stagging area after this
+
+to rename file using os:
+mv oldfilename.ext newfilename.ext
+ if we use this method then we need to add a file to git again and need to commit. Or we can use below command
+  to tell the git it was renamed,it will move all the renamed or moved file changes to git
+ 
+git add -A
+ 
+to list the tracked files :
+git ls-files
+
+to add a file:
+git add filename
+
+to commit a file :
+git commit -m "message for commit"
+
+
+
+to add and commit of tracked files:
+
+git commit -am "adding copy right"
+
+
+
+alias:
+git log --all --graph --decorate --oneline
+git config --global alias.hist "log --all --graph --decorate --oneline"
+git hist
+
+to_ignore_files
+we have to add dir,specific file or extn to .gitignore file
+
+git branch:
+to list local and remote branch
+
+git branch -a
+
+to create branch:
+git branch newbranch_name
+
+to switch to bw branch:
+git checkout branchname
+
+to rename a branch
+git branch -m oldbranchname newbranchname
+
+to del branch
+git branch -d branchname 
+
+to create branch and move to that branch
+git checkout -b newbranchname
+
+befor merging we can chceck master and new branch
+git diff master newbranchname
+
+to merge branch
+before merging we have to switch to master branch
+git checkout master
+git merge branchname (-m "message" )----optional
+
+
+fast forward:
+when there are no changes made on a target branch(master)
+
+to view commits
+git log --oneline --graph --decorate
+
+to diablr fast-forward:
+git merge branchname --no-ff
+
+
+Merge conflicts:
+
+to compare two branches
+git diff branch1 branch2
+git difftool branch1 branch2
+
+two compare conflict files:
+git mergetool master conflict branch
+
+Rebasing Scneario :
+Im not done with my feature(branch) but i want to incorporate any changes that may have happened on master,So that i dont have massive headache when i go to merge later,Fot that i can use rebase.i can rebase master in my feature branch.For rebasing we hace to checkout to feature branch and exec belw
+
+git rebase master
+
+to abort a rebase during conflict:
+git rebase --abort
+
+Rebase conflict :
+when you have conflit in rebase use mergrtool to compare and confirm the changes over conflicts
+
+then add the conflicted file and exec below query
+git rebase --continue
+
+to rebase incoming cnahges from git hub repository:
+
+to update the refrences bw remote and local repository
+git fetch origin master
+
+
+to rebase a master origin without merging we can use below 
+git pull --rebase origin master
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
